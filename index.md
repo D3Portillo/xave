@@ -1,6 +1,10 @@
 # Xave - HTML5 SaveAs helper
 
-This is a tiny tool to save stuff. Opens a saveAs like dialog.
+A a tiny tool to save stuff, it pens a saveAs like dialog.
+
+![npm install xave](https://nodei.co/npm/xave.png?downloads=true&downloadRank=true)
+
+![Example](./example.gif)
 
 ```
 yarn add xave
@@ -24,5 +28,5 @@ save(blob, "text.txt")
 ## CDN
 
 ```html
-<script src="https://d3portillo.me/xave/src/index.min.js"></script>
+<script src="https://d3portillo.github.io/xave/src/index.min.js"></script>
 ```
