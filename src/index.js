@@ -1,6 +1,5 @@
 /**
  * Xave - Tiny HTML5 file save as dialog tool
- * @author Denny Portillo<hello@d3portillo.me>
  * @license MIT
  * @see https://github.com/d3portillo/xave
  * @version 0.0.1
@@ -22,9 +21,8 @@ function f() {
   }
   function get(url) {
     return fetch(url).then((r) => {
-      const type = r.headers.get("content-type")
       return new Promise((resolve) => {
-        r.blob().then((blob) => resolve({ blob, type }))
+        r.blob().then((blob) => resolve({ blob }))
       })
     })
   }
@@ -47,15 +45,10 @@ function f() {
     const isObject = !Array.isArray(url) && type === "object"
     switch (true) {
       case isBlobURI:
-        return get(url).then(({ type }) => {
-          const ext = type.split("/").pop()
-          appendAndRemove(url, name, ext)
-        })
+        return appendAndRemove(url, name)
       case isString:
-        return get(url).then(({ blob, type }) => {
-          const ext = type.split("/").pop()
-          const turl = getUrlFor(blob)
-          appendAndRemove(turl, name, ext)
+        return get(url).then(({ blob }) => {
+          appendAndRemove(getUrlFor(blob), name)
         })
       case isObject:
         return appendAndRemove(getUrlFor(url), name)
