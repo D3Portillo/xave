@@ -2,7 +2,7 @@
  * Xave - Tiny HTML5 file save as dialog tool
  * @license MIT
  * @see https://github.com/d3portillo/xave
- * @version 0.0.2
+ * @version 0.0.3
  */
 
 function f() {
@@ -11,9 +11,10 @@ function f() {
     const fullExt = ext ? `.${ext}` : ""
     const a = document.createElement("a")
     a.target = "_blank"
-    document.body.appendChild(a)
+    a.rel = "noopener"
     a.href = url
     a.download = name ? name : `${utime}${fullExt}`
+    document.body.appendChild(a)
     a.click()
     setTimeout(() => {
       a.remove()
@@ -31,11 +32,11 @@ function f() {
     const url = URL.createObjectURL(blob)
     setTimeout(() => {
       URL.revokeObjectURL(url)
-    }, 1000)
+    }, 1e4)
     return url
   }
   /**
-   *
+   * Xave - Save("https://something","some.png")
    * @param { (Blob | String) } url - URL or Blob to download and saveAs
    * @param { String } name - The name and extension of file, ej: name.ext
    */

@@ -1,6 +1,6 @@
-# HTML5 SaveAs helper
+# HTML5 SaveAs Helper
 
-![Example](./example.gif)
+![Example](https://www.dropbox.com/s/6loiwgznoiihb0w/example.gif?raw=1)
 
 ```
 yarn add xave
@@ -8,6 +8,10 @@ npm install xave
 ```
 
 ## Usage
+
+You can execute the xave function and pass an url string, Blob or Blob URI as first arg. Second arg is the name and extension of file you want the tool to save the file.
+
+`xave(Blob|URL|URI, "name.extension")`
 
 ```js
 import save from "xave"

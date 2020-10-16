@@ -1,6 +1,6 @@
 {
   "name": "xave",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "📦 Tiny tool to save stuff similar to the saveAs dialog",
   "main": "src/index.min.js",
   "repository": {
@@ -13,8 +13,11 @@
   "keywords": [
     "browser",
     "html5",
-    "http"
+    "http",
+    "saveas",
+    "blob"
   ],
+  "homepage": "https://d3portillo.github.io/xave/",
   "author": "Denny Portillo <d3portillo@gmail.com>",
   "license": "MIT",
   "bugs": {
