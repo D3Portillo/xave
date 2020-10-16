@@ -1,6 +1,6 @@
 # Xave - HTML5 JS SaveAs tool
 
-A a tiny tool to save stuff, it pens a saveAs like dialog.
+A tiny ~.5kb tool to save stuff. It opens a saveAs like dialog on browser.
 
 ![Size](https://img.shields.io/bundlephobia/minzip/xave)
 ![Example](https://www.dropbox.com/s/6loiwgznoiihb0w/example.gif?raw=1)
@@ -15,20 +15,40 @@ npm install xave
 
 ## Usage
 
-You can execute the xave function and pass an url string, Blob or Blob URI as first arg. Second arg is the name and extension of file you want the tool to save the file.
+The xave function accepts 2 arguments. First argument is an url string, Blob or Blob URI, second one is the `"name.extension"` string of the file you want to save.
 
 `xave(Blob|URL|URI, "name.extension")`
 
 ```js
 import save from "xave"
+// Or
+const save = require("xave")
+
 const blob = new Blob(["xd"], { type: "text/plain" })
 save(blob, "text.txt")
 ```
 
 ```js
 const save = require("xave")
-const blob = new Blob(["xd"], { type: "text/plain" })
-save(blob, "text.txt")
+
+//PDF
+const blob = new Blob(["someencodedcontent"], { type: "application/pdf" })
+save(blob, "report.pdf")
+
+//images
+const image = new Blob(["someencodedcontent"], { type: "image/png" })
+save(image, "image.png")
+
+//Canvas
+const canvas = window.canvas
+const ctx = canvas.getContext("2d")
+ctx.fillStyle = "red"
+ctx.beginPath()
+ctx.arc(15, 15, 15, 0, Math.PI * 2, true)
+ctx.closePath()
+ctx.fill()
+const url = canvas.toDataURL()
+save(url)
 ```
 
 ## CDN

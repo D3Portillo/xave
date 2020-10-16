@@ -9,18 +9,15 @@ npm install xave
 
 ## Usage
 
-You can execute the xave function and pass an url string, Blob or Blob URI as first arg. Second arg is the name and extension of file you want the tool to save the file.
+A tiny ~.5kb function you can execute to save stuff. The xave function accepts 2 arguments, first is an url string, Blob or Blob URI and second is the name .extension of content you want to save.
 
 `xave(Blob|URL|URI, "name.extension")`
 
 ```js
 import save from "xave"
-const blob = new Blob(["xd"], { type: "text/plain" })
-save(blob, "text.txt")
-```
-
-```js
+// Or
 const save = require("xave")
+
 const blob = new Blob(["xd"], { type: "text/plain" })
 save(blob, "text.txt")
 ```

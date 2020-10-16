@@ -8,7 +8,8 @@
     "url": "git+https://github.com/D3Portillo/xave.git"
   },
   "scripts": {
-    "roll": "terser src/index.js -o src/index.min.js --comments=all && src/superformat.sh"
+    "roll": "terser src/index.js -o src/index.min.js --comments=all && src/superformat.sh",
+    "start": "serve ./src"
   },
   "keywords": [
     "browser",

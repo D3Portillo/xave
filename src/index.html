@@ -7,15 +7,30 @@
   </head>
   <body>
     <button onclick="test()">Test</button>
+    <button onclick="parseCanvas()">canvas</button>
+    <canvas id="canvas"></canvas>
     <script>
       function test() {
+        const uzaki = `https://nordot-res.cloudinary.com/c_limit,w_800,f_auto,q_auto:eco/ch/images/670591514444874849/origin_1.jpg`
         const pdf = `https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf`
         const url = `https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png`
         const blobURL = URL.createObjectURL(
           new Blob(["stuff"], { type: "text/csv" })
         )
         const b = new Blob(["stuffs"], { type: "text/plain" })
-        xave(pdf)
+        xave(uzaki, "uzaki.png")
+      }
+
+      function parseCanvas() {
+        const canvas = window.canvas
+        const ctx = canvas.getContext("2d")
+        ctx.fillStyle = "red"
+        ctx.beginPath()
+        ctx.arc(15, 15, 15, 0, Math.PI * 2, true)
+        ctx.closePath()
+        ctx.fill()
+        const url = canvas.toDataURL()
+        xave(url)
       }
     </script>
   </body>
