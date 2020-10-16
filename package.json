@@ -1,6 +1,6 @@
 {
   "name": "xave",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "📦 Tiny tool to save stuff similar to the saveAs dialog",
   "main": "src/index.min.js",
   "repository": {

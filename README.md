@@ -4,6 +4,7 @@ A a tiny tool to save stuff, it pens a saveAs like dialog.
 
 ![npm install xave](https://nodei.co/npm/xave.png?downloads=true&downloadRank=true)
 
+![Size](https://img.shields.io/bundlephobia/minzip/xave)
 ![Example](./example.gif)
 
 ```

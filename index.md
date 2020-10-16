@@ -1,8 +1,4 @@
-# Xave - HTML5 SaveAs helper
-
-A a tiny tool to save stuff, it pens a saveAs like dialog.
-
-![npm install xave](https://nodei.co/npm/xave.png?downloads=true&downloadRank=true)
+# HTML5 SaveAs helper
 
 ![Example](./example.gif)
 
