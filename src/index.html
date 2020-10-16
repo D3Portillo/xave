@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="test()">Test</button>
+    <script>
+      function test() {
+        const pdf = `https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjMuqaSjrjsAhXrD7kGHSCQCI8QFjAAegQIBBAC&url=http%3A%2F%2Fwww.africau.edu%2Fimages%2Fdefault%2Fsample.pdf&usg=AOvVaw1Gt0y2rGQOt7itj5l55f3l`
+        const url = `https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png`
+        const blobURL = URL.createObjectURL(
+          new Blob(["stuff"], { type: "text/csv" })
+        )
+        const b = new Blob(["stuffs"], { type: "text/plain" })
+        xave(b, "algo.txt")
+      }
+    </script>
+  </body>
+</html>
