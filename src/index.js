@@ -36,9 +36,8 @@ function f() {
     return url
   }
   /**
-   * Xave - Save("https://something","some.png")
-   * @param { (Blob | String) } url - URL or Blob to download and saveAs
-   * @param { String } name - The name and extension of file, ej: name.ext
+   * Xave - xave( URL | Blob | URI , "some.png")
+   * @returns { void }
    */
   function xave(url, name) {
     const type = typeof url
